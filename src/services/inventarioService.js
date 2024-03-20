@@ -1,6 +1,6 @@
 import { axiosInstance } from '../helper/axios-config';
 
-const obtenerInventario = () => {
+const obtenerInventarios = () => {
     return axiosInstance.get('inventario', {
         headers: {
             'Content-Type': 'application/json'
@@ -25,5 +25,5 @@ const editarInventario = (inventarioId, data) => {
 }
 
 export {
-    obtenerInventario, crearInventario, editarInventario
+    obtenerInventarios, crearInventario, editarInventario
 }
