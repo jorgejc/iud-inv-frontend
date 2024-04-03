@@ -1,6 +1,6 @@
 import { axiosInstance } from '../helper/axios-config';
 
-const obtenerMarca = () => {
+const getMarcas = () => {
     return axiosInstance.get('marca', {
         headers: {
             'Content-Type': 'application/json'
@@ -25,5 +25,5 @@ const editarMarca = (marcaId, data) => {
 }
 
 export {
-    obtenerMarca, crearMarca, editarMarca
+    getMarcas, crearMarca, editarMarca
 }

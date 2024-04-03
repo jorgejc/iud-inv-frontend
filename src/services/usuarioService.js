@@ -1,6 +1,6 @@
 import { axiosInstance } from '../helper/axios-config';
 
-const obtenerUsuario = () => {
+const getUsuarios = () => {
     return axiosInstance.get('usuario', { // http://localhost:4000/usuario
         headers: {
             'Content-Type': 'application/json'
@@ -25,5 +25,5 @@ const editarUsuario = (usuarioId, data) => {
 }
 
 export {
-    obtenerUsuario, crearUsuario, editarUsuario
+    getUsuarios, crearUsuario, editarUsuario
 }

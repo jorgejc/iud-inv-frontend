@@ -1,6 +1,6 @@
 import { axiosInstance } from '../helper/axios-config';
 
-const obtenerEstadosEquipos = () => {
+const getEstados = () => {
     return axiosInstance.get('estado-equipo', {
         headers: {
             'Content-Type': 'application/json'
@@ -8,7 +8,7 @@ const obtenerEstadosEquipos = () => {
     });
 }
 
-const crearEstadoEquipo = (data) => {
+const crearEstado = (data) => {
     return axiosInstance.post('estado-equipo', data, {
         headers: {
             'Content-Type': 'application/json'
@@ -16,7 +16,7 @@ const crearEstadoEquipo = (data) => {
     });
 }
 
-const editarEstadoEquipo = (estadoEquipoId, data) => {
+const editarEstado = (estadoEquipoId, data) => {
     return axiosInstance.put(`estado-equipo/${estadoEquipoId}`, data, {
         headers: {
             'Content-Type': 'application/json'
@@ -25,5 +25,5 @@ const editarEstadoEquipo = (estadoEquipoId, data) => {
 }
 
 export {
-    obtenerEstadosEquipos, crearEstadoEquipo, editarEstadoEquipo
+    getEstados, crearEstado, editarEstado
 }
